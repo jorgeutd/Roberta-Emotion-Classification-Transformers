@@ -76,7 +76,7 @@ if __name__ == "__main__":
         label2id[label] = str(i)
         id2label[str(i)] = label
 
-    # compute metrics function for binary classification
+    # compute metrics function for multiclass classification
     def compute_metrics(pred):
         labels = pred.label_ids
         preds = pred.predictions.argmax(-1)
